@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="greeting">
+        Create Your Competitive Quiz
+    </div>
+
+    <div class="container">
+        <div class="form-column left">
+            <form id="quiz-form">
+                <input type="text" id="question" name="question" placeholder="Enter your question" required>
+                <input type="text" id="option-a" name="option-a" placeholder="Option A" required>
+                <input type="text" id="option-b" name="option-b" placeholder="Option B" required>
+                <input type="text" id="option-c" name="option-c" placeholder="Option C" required>
+                <input type="text" id="option-d" name="option-d" placeholder="Option D" required>
+                <select id="correct-option" name="correct-option" required>
+                    <option value="" disabled selected>Select the correct option</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                <input type="submit" value="Add">
+            </form>
+        </div>
+
+        <div class="form-column right">
+            <div class="form-header">
+                <input type="text" id="subject" name="subject" placeholder="Enter subject name" required>
+                <select id="difficulty" name="difficulty">
+                    <option value="basic">Basic</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <input type="text" id="time-limit" name="time-limit" placeholder="Enter the time limit (minutes)" required>
+            </div>
+
+            <div id="questions-container"></div>
+                
+            <div class="button-container">
+                <button id="publish-btn">Publish</button>
+                <button id="back-btn">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
